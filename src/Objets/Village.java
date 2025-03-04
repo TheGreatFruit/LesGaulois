@@ -29,7 +29,10 @@ public class Village {
 		Gaulois abraracourcix = new Gaulois("Abraracourcix", 6);
 		village.setChef(abraracourcix);
 		Gaulois asterix = new Gaulois("Astérix", 8);
-		village.ajouterVillageois(asterix);		
+		village.ajouterVillageois(asterix);
+		
+
+		
 		Gaulois gaulois = village.trouverVillageois(1);
 		System.out.println(gaulois);
 		gaulois = village.trouverVillageois(2);
@@ -46,12 +49,14 @@ public class Village {
 		}	
 	}
 	
-	public void trouverVillageois(int numVillageois) {
+	public Gaulois trouverVillageois(int numVillageois) {
 		if (numVillageois > villageois.length) {
 			System.out.println("Il n'y a pas autant d'habitants "
 					+ "dans notre village !");
+			return null;
 		} else {
 			System.out.println(villageois[numVillageois-1]);
+			return villageois[numVillageois-1];
 		}
 	}
 	
