@@ -1,9 +1,11 @@
 package personnage;
+import Objets.Village;
 
 public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
+	private boolean village;
 
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
@@ -14,6 +16,10 @@ public class Gaulois {
 		return nom;
 	}
 
+	public void setVillage(Village village) {
+		
+	}
+	
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "\"" + texte + "\"");
 	}
